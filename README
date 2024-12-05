@@ -1,0 +1,74 @@
+Event Management System
+
+
+Project Overview
+
+This Event Management System is a web application designed to allow Admin and User roles to manage and interact with events. The frontend is built using HTML, CSS, and JavaScript, while the backend is powered by GraphQL, which enables efficient data fetching and mutations. This system includes role-based dashboards for Admin and User, where Admin can manage events (create, view, delete), while Users can view, register for, and manage their event registrations.
+
+Features Implemented
+
+1. Admin Dashboard:
+
+- View a table of all events.
+- Add new events via a form.
+- Delete events.
+
+2. User Dashboard:
+
+- View available events in a card layout.
+- Register for events with a "Register" button.
+- View registered events in a separate section.
+- Cancel event registration.
+
+3. Authentication:
+
+- Role-based access (Admin and User).
+- LocalStorage used to mock user authentication and manage sessions.
+
+4. GraphQL Integration:
+- Fetch events and user registrations using GraphQL queries.
+- Create, delete, and register for events via GraphQL mutations.
+- How to Set Up and Run the Project
+
+Backend Setup (GraphQL API)
+
+This project uses a mock GraphQL API, so you can simulate the backend using a GraphQL server or integrate it with a live GraphQL service.
+
+Clone the repository containing the GraphQL backend.
+Ensure that the GraphQL server is up and running.
+Make sure your GraphQL API includes the following types and operations:
+Event and User types.
+Queries: fetchEvents, fetchUserDetails.
+Mutations: addEvent, deleteEvent, registerForEvent.
+
+
+Frontend Setup
+
+Clone or download the frontend files (HTML, CSS, and JavaScript).
+Ensure that the GraphQL API endpoint is correctly integrated into the frontend (replace the mock API URL with your actual API URL).
+Open index.html in any web browser to start the application.
+
+
+Challenges Faced and How They Were Overcome
+
+1. Handling Role-Based Dashboards:
+
+Challenge: Ensuring that different users (Admin and User) see the correct dashboard upon login.
+Solution: Used LocalStorage to store user roles and dynamically render the appropriate dashboard based on the stored role.
+GraphQL API Integration:
+
+Challenge: Setting up efficient communication between the frontend and backend.
+Solution: Used fetch() for GraphQL queries and mutations to retrieve and send data dynamically, avoiding over-fetching of data.
+Event Registration Logic:
+
+Challenge: Ensuring that users can register for events, and cancel their registrations when needed.
+Solution: Stored user event registrations in LocalStorage, ensuring that each user could track their registered events and make changes (register or cancel).
+Event Deletion by Admin:
+
+Challenge: Ensuring that Admins can delete events and have the event list dynamically update.
+Solution: Implemented the deleteEvent mutation via GraphQL, and refreshed the event list after each deletion.
+
+
+Conclusion
+
+This project is a full-fledged Event Management System that effectively demonstrates how to build a role-based, dynamic web application using HTML, CSS, JavaScript, and GraphQL. The system allows Admins to manage events and Users to interact with those events, providing a seamless experience for both roles.
