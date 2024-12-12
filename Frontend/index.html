@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Event Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-container">
+        <!-- Register Section -->
+        <div id="register-container">
+            <h1>Register</h1>
+            <input id="register-username" type="text" placeholder="Username" required />
+            <input id="register-password" type="password" placeholder="Password" required />
+            <select id="register-role">
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+            </select>
+            <button id="register-btn">Register</button>
+            <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+        </div>
+
+        <!-- Login Section -->
+        <div id="login-container" class="hidden">
+            <h1>Login</h1>
+            <input id="login-username" type="text" placeholder="Username" required />
+            <input id="login-password" type="password" placeholder="Password" required />
+            <button id="login-btn">Login</button>
+            <p>Don't have an account? <a href="#" id="switch-to-register">Register</a></p>
+        </div>
+
+       <!-- User Dashboard -->
+<div id="user-dashboard" class="hidden">
+    <h1>User Dashboard</h1>
+    <!-- <button id="register-for-event-btn">Register for Event</button> -->
+    <button id="show-registered-events-btn">Show Registered Events</button>
+    <div id="user-registered-events-list"></div>
+
+    <div id="user-events-list"></div>
+    <div id="user-registered-events-list" class="hidden"></div>
+    <button id="user-logout-btn">Logout</button>
+</div>
+
+
+        <!-- Admin Dashboard -->
+        <div id="admin-dashboard" class="hidden">
+            <h1>Admin Dashboard</h1>
+            <div>
+                <h2>Add New Event</h2>
+                <input id="event-title" type="text" placeholder="Event Title" required />
+                <input id="event-date" type="date" required />
+                <input id="event-location" type="text" placeholder="Location" required />
+                <button id="add-event-btn">Add Event</button>
+            </div>
+            <div>
+                <h2>All Events</h2>
+                <div id="admin-events-list"></div>
+            </div>
+            <button id="admin-logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
